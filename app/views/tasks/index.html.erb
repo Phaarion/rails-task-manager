@@ -5,4 +5,10 @@
   <% else %>
     <p> [ ]<%= link_to task.title, task_path(task) %></p>
   <% end %>
+<%= link_to 'Edit', edit_path(task) %>
+<%= link_to 'Destroy', delete_path(task), method: :delete,  icon: "user"  %>
 <% end %>
+<br>
+<br>
+<p> <%= link_to 'Add a new task', tasks_new_path(@task) %></p>
+
